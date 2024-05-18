@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Offender Management</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1>Offender Management</h1>
+
+    <div>
+        <h2>Add Offender</h2>
+        <label for="convictNameInput">Name of Convict:</label>
+        <input type="text" id="convictNameInput" name="convictNameInput"><br><br>
+
+        <label for="provisionInput">Provision:</label>
+        <input type="text" id="provisionInput" name="provisionInput"><br><br>
+
+        <label for="stateInput">State:</label>
+        <input type="text" id="stateInput" name="stateInput"><br><br>
+
+        <label for="placeInput">Place:</label>
+        <input type="text" id="placeInput" name="placeInput"><br><br>
+
+        <label for="crimeCommittedInput">Crime Committed:</label>
+        <input type="text" id="crimeCommittedInput" name="crimeCommittedInput"><br><br>
+
+        <label for="convictionDateInput">Date of Conviction:</label>
+        <input type="date" id="convictionDateInput" name="convictionDateInput"><br><br>
+
+        <label for="punishmentInput">Punishment:</label>
+        <input type="text" id="punishmentInput" name="punishmentInput"><br><br>
+
+        <label for="factsInput">Facts:</label>
+        <input type="text" id="factsInput" name="factsInput"><br><br>
+
+        <label for="ipfsHashInput">IPFS Hash:</label>
+        <input type="text" id="ipfsHashInput" name="ipfsHashInput"><br><br>
+
+
+        <button onclick="addOffender()">Add Offender</button>
+    </div>
+
+    <div>
+        <h2>Offender List</h2>
+        <ul id="offenderList"></ul>
+        <button onclick="retrieveData()">Retrieve Offender Data</button>
+    </div>
+</body>
+</html>
