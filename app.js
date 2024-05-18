@@ -511,14 +511,18 @@ async function retrieveData() {
         // Retrieve the number of offenders
         const offendersCountBigInt = await contract.methods.getOffendersCount().call();
         const offendersCount = Number(offendersCountBigInt); // Convert BigInt to number
+        
+        // Create a Set to store unique offender addresses
+        const uniqueOffenderAddresses = new Set();
 
-        // Loop through all offenders and retrieve their data
+        // Loop through all offenders and add their addresses to the set
         for (let i = 0; i < offendersCount; i++) {
             const offenderAddress = await contract.methods.getOffenderAddress(i).call();
-            // Check if the offender address has already been processed
-            if (uniqueOffenderAddresses.has(offenderAddress)) {
-                continue; // Skip processing if already processed
-            }
+            uniqueOffenderAddresses.add(offenderAddress);
+        }
+
+        // Loop through unique offender addresses and fetch their data
+        for (const offenderAddress of uniqueOffenderAddresses) {
             const offenderData = await contract.methods.getOffender(offenderAddress).call();
 
             const convictName = offenderData[0];
@@ -531,8 +535,7 @@ async function retrieveData() {
             const facts = offenderData[7];
             const ipfsHash = offenderData[8];
 
-            console.log(`Offender ${i + 1}:`);
-            console.log(`  Convict Name: ${convictName}`);
+            console.log(`Offender: ${convictName}`);
             console.log(`  Provision: ${provision}`);
             console.log(`  State: ${state}`);
             console.log(`  Place: ${place}`);
@@ -552,4 +555,5 @@ async function retrieveData() {
         console.error("An error occurred: ", error);
     }
 }
+
 
