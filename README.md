@@ -1,4 +1,4 @@
-JurisSecure ⚖️🔒
+JurisSecure ⚖️
 
 JurisSecure is a comprehensive, decentralized legal document authentication and management platform built using blockchain technology. Designed to provide secure, immutable, and transparent document handling, it caters to individuals, businesses, and law firms seeking to manage legal contracts and sensitive documents without the risk of tampering.
 
