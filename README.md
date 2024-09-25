@@ -7,7 +7,9 @@ JurisSecure is a comprehensive, decentralized legal document authentication and 
 JurisSecure addresses the pain points in traditional legal documentation by offering a decentralized solution where users can upload, verify, and authenticate legal documents. Through blockchain technology, it ensures integrity, transparency, and security, reducing the risk of forgery or tampering.
 
 Project Link : https://devfolio.co/
+
 Youtube Link : https://www.youtube.com/watch?v=T3P_EZrkgmM&t=60s
+
 
 🎯 Key Features
 
